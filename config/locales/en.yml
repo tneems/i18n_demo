@@ -1,0 +1,63 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  default_title: I18n is Awesome!
+  activerecord:
+    models:
+      user: User
+    attributes:
+      user: &user_attributes
+        base: Your Mom
+        name: Name
+        email: Email
+        address1: Address
+        address2: Address Cont.
+        state: State
+        zip_code: Zip Code
+    errors:
+      models:
+        user:
+          not_an_email: "needs to have an email so we can spam you"
+          attributes:
+            name:
+              blank: "Who are you?"
+            email:
+              not_an_email: "is not a valid email"
+      messages:
+        blank: "is required!"
+  errors:
+    format: "%{attribute}: %{message}"
+  helpers:
+    select:
+      prompt: What state do you live in?
+    label:
+      user:
+        <<: *user_attributes
+        email: Please Enter Your Email Address
+        zip_code: Zip Code (12345 or 12345-6789)
+    submit:
+      user:
+        create: Create %{model}
+        update: Updating %{model}
+  users:
+    shared: &users_shared
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      back: Back
+    form:
+      form_title: "User Form"
+    new:
+      <<: *users_shared
+      form_title: New User
+    edit:
+      <<: *users_shared
+      form_title: Editing %{name}
+    show:
+      <<: *users_shared
+    index:
+      <<: *users_shared
+      listing: Listing Users
+      confirm_destroy: 'Are you sure?'
+      new_user: "New User"
