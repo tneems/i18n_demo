@@ -1,0 +1,63 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ja:
+  default_title: I18n 最高!
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user: &user_attributes
+        base: Your Mom
+        name: 名前
+        # email: エメール
+        address1: 住所
+        address2: 住所２
+        state: 県
+        zip_code: 郵便局番号
+    errors:
+      models:
+        user:
+          not_an_email: "迷惑メール送るために必要"
+          attributes:
+            name:
+              blank: "君て誰"
+            email:
+              not_an_email: "違う！"
+      messages:
+        blank: "必要"
+  errors:
+    format: "%{attribute}: %{message}"
+  helpers:
+    select:
+      prompt: 何県？
+    label:
+      user:
+        <<: *user_attributes
+        # email: Please Enter Your Email Address
+        # zip_code: Zip Code (12345 or 12345-6789)
+    submit:
+      user:
+        create: "%{model}を作る"
+        update: "%{model}を更新する"
+  users:
+    shared: &users_shared
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      back: Back
+    form:
+      form_title: "User Form"
+    new:
+      <<: *users_shared
+      form_title: New User
+    edit:
+      <<: *users_shared
+      form_title: Editing %{name}
+    show:
+      <<: *users_shared
+    index:
+      <<: *users_shared
+      listing: Listing ユーザー
+      confirm_destroy: '本当に？'
+      new_user: "New ユーザー"

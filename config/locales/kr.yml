@@ -1,0 +1,9 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+kr:
+  helpers:
+    label:
+      user:
+        email: 조선글 Koren Email
+        zip_code: 조선글 Korean Zip Code
